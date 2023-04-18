@@ -7,3 +7,18 @@
     --green: #77b300;
     --cream: #f1f5e6;
 }
+body{
+    background-color: var(--cream);
+    font-size: 2em;
+    font-family: var(--main);
+}
+nav{
+    border-bottom: 2px solid var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav h1{
+    color: var(--green);
+    font-family: var(--headings);
+}
