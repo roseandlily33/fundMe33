@@ -1,27 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Schibsted+Grotesk&display=swap');
 
 :root {
-    --main: 'Libre Baskerville', serif;
-    --headings: 'Unica One', cursive;
+    --headings: 'MuseoModerno', cursive;
+    --main: 'Schibsted Grotesk', sans-serif;
     --black: #111a0c;
     --green: #77b300;
     --cream: #f1f5e6;
 }
 body{
     background-color: var(--cream);
-    font-size: 2em;
+    font-size: 1em;
     font-family: var(--main);
+    color: var(--black);
 }
+/* Header */
 nav{
-    border-bottom: 2px solid var(--black);
+    border-bottom: 3px solid var(--black);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: orange;
+    align-items: center;
 }
 nav h1{
     color: var(--green);
     font-family: var(--headings);
+    font-size: 2.5em;
+    padding-left: 0.5em;
+}
+nav a{
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.4em;
+    color: var(--black);
+    margin-right: 0.5em;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: var(--green);
+}
+
+#logout{
+    color: var(--cream);
+    background-color: var(--green);
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em;
+}
+/* Projects Section */
+#projects{
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #77b300;
 }
 #projectDiv{
     display: flex;
@@ -29,13 +58,17 @@ nav h1{
     padding: 1em;
     border: 1px solid var(--black);
 }
-#projects{
-    margin: 0 auto;
-    padding: 1em;
-    background-color: #77b300;
-}
 #bottomPart{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+#projectName{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: var(--headings);
+}
+#projectDesc{
+    font-size: 0.8em;
+}
+#
