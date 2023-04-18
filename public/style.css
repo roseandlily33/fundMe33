@@ -22,3 +22,19 @@ nav h1{
     color: var(--green);
     font-family: var(--headings);
 }
+#projectDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid var(--black);
+}
+#projects{
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #77b300;
+}
+#bottomPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

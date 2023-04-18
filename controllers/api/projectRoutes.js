@@ -5,9 +5,10 @@ const { Project } = require('../../models');
 router.post('/', async (req, res )=> {
     try{
         const newProj = await Project.create({
-
+            ...req.body,
+            user_id: req.session.user_id,
         })
-
+        res.status(200).json(newProj);
     } catch(err){
         res.status(500).json(err);
     }

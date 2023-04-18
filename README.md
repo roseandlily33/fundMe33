@@ -2,10 +2,8 @@
 Mini #14 Crowdfunding App 
 
 ## Description: 
-For a crowdfunding application 
-- list of current project seeking funding
-- Create an account
-- post my own projcts to ask for funding
+Handlebars full stack application built with some starter code I tried to do as much as possible 
+on my own, and then
 
 ## Screenshots:
 
