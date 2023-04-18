@@ -10,7 +10,7 @@ const routes = require('./controllers');
 
 console.log(4);
 const app = express();
-const PORT = process.env.PORT || env;
+const PORT = process.env.PORT || 3001;
 
 const sess = {
     secret: process.env.SECRET,
