@@ -3,6 +3,23 @@ const { Project } = require('../../models');
 
 // localhost:3001/api/projects
 
+router.get('/:id', async (req, res) => {
+    if(!req.session.loggedIn){
+        res.redirect('/login');
+    } else {
+        try{
+            const projectData = await Project.findByPk(req.params.id);
+            const project = projectData.get({plain: true});
+            res.render('singleProject',{
+            project,
+            loggedIn: req.session.loggedIn
+        });
+        } catch(err){
+            res.status(500).json(err);
+        }
+    }
+})
+
 // Post a project:
 router.post('/', async (req, res )=> {
     try{

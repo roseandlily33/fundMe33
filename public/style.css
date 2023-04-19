@@ -38,7 +38,6 @@ nav a:hover{
     text-decoration: underline;
     color: var(--green);
 }
-
 #logout{
     color: var(--cream);
     background-color: var(--green);
@@ -50,13 +49,13 @@ nav a:hover{
 #projects{
     margin: 0 auto;
     padding: 1em;
-    background-color: #77b300;
 }
 #projectDiv{
     display: flex;
     flex-direction: column;
     padding: 1em;
     border: 1px solid var(--black);
+    border-radius: 15px;
 }
 #bottomPart{
     display: flex;
@@ -78,11 +77,14 @@ nav a:hover{
     font-size: 0.7em;
     color: var(--green);
 }
-#projectBtn{
+#projectBtn, #loginBtn{
     background-color: var(--green);
     border-radius: 15px;
     color: var(--cream);
     font-family: var(--headings);
+    border: none;
+    padding: 1em;
+    margin: 1em;
 }
 
 /* Single Project */
@@ -90,4 +92,32 @@ nav a:hover{
     border: 2px solid var(--black);
     border-radius: 15px;
 
+}
+
+/* Login Page */
+#loginDiv{
+    margin: 2em;
+    padding: 2em;
+   
+}
+h2{
+    text-align: center;
+    font-family: var(--headings);
+    font-size: 2em;
+    color: var(--green);
+}
+#usernameInput, #passwordInput{
+    border-radius: 15px;
+    padding: 1em;
+    border: none;
+    width: 30%;
+    margin: 1em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loginBtn{
+    padding: 1em 2em;
 }
