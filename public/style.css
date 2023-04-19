@@ -60,7 +60,7 @@ nav a:hover{
 #bottomPart{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 #projectName{
     font-size: 1.5em;
@@ -68,13 +68,13 @@ nav a:hover{
     font-family: var(--headings);
 }
 #projectDesc{
-    font-size: 0.8em;
+    font-size: 1.2em;
 }
-#productDate{
-    font-size: 0.7em;
+#projectDate{
+    font-size: 0.9em;
 }
-#productFund{
-    font-size: 0.7em;
+#projectFund{
+    font-size: 1em;
     color: var(--green);
 }
 #projectBtn, #loginBtn{
@@ -91,9 +91,7 @@ nav a:hover{
 #singleProject{
     border: 2px solid var(--black);
     border-radius: 15px;
-
 }
-
 /* Login Page */
 #loginDiv{
     margin: 2em;
@@ -106,7 +104,7 @@ h2{
     font-size: 2em;
     color: var(--green);
 }
-#usernameInput, #passwordInput{
+#usernameInput, #passwordInput, #emailInput{
     border-radius: 15px;
     padding: 1em;
     border: none;
