@@ -3,7 +3,8 @@
  <p id="projectName">{{name}}</p>
         <p id="projectDesc">{{description}}</p>
         <div id="bottomPart">
-         <p id="projectDate">{{ date_created}}</p>
+         <p id="projectDate">{{format_time date_created}}</p>
+         <p>{{user.username}}</p>
          <p id="projectFund"> ${{needed_funding}}</p>
          <button id="fundMeBtn">Fund Me!</button>
         </div>

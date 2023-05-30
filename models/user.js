@@ -16,7 +16,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
         }, 
@@ -50,6 +50,7 @@ User.init(
             modelName: 'user',
             freezeTableName: true,
             underscored: true,  
+            timestamps: false,
         
     }
     
