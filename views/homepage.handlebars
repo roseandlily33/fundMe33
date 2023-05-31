@@ -1,0 +1,8 @@
+{{#each projects as |project|}}
+   <div class="projectDiv">
+    <h2>{{project.name}}</h2>
+    <p>{{project.description}}</p>
+    <p>$ {{project.needed_funding}}</p>
+    <p>{{format_time project.date_created}}</p>
+   </div>
+{{/each}}

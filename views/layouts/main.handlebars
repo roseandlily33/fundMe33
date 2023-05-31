@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/style.css"/>
-    <title>Fund Me!</title>
+    <link href="style.css" rel="stylesheet">
+    <title>Fund Me </title>
 </head>
 <body>
-    <nav>
-         <h1>Fund Me!</h1>
-         <div>
-            <a href ="/">Home</a>
-            {{#if loggedIn}}
-            <button id="logout">Logout</button>
-            {{else}}
-            <a href="/login">Login</a>
-            {{/if}}
-         </div>
-    </nav>
     <main>
-        {{{body}}}
+<header>
+                <nav>
+                    <div>
+                 <a href='/'>Fund Me</a>
+                 </div>
+                 <div>
+                {{#if logged_in}}
+                <a href="/profile">Profile</a>
+                <a href="/logout">Logout</a>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
+                </div>
+            </nav>
+</header>
+<section class="container">
+    {{{body}}}
+</section>
+
+
     </main>
-   
+
+<footer>
+<h6>Created by Victoria Benoit 2023</h6>
+</footer>
+    {{#if logged_in}}
+    <script src="/logout.js"></script>
+    {{/if}}
+
 </body>
 </html>

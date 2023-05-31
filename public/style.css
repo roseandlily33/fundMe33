@@ -1,124 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Schibsted+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit&family=Lato:wght@300&display=swap');
 
-:root {
-    --headings: 'MuseoModerno', cursive;
-    --main: 'Schibsted Grotesk', sans-serif;
-    --black: #111a0c;
-    --green: #77b300;
-    --cream: #f1f5e6;
+:root{
+    --black: #26272C;
+    --shadow: #b3b3b5;
+    --green: #5e675a;
+    --lightGreen: #9db396;
+    --white: #f7f2ee;
+    --header: 1.5em;
+    --main: 1em;
+    --mainFont: 'Lato', sans-serif;
 }
-body{
-    background-color: var(--cream);
-    font-size: 1em;
-    font-family: var(--main);
-    color: var(--black);
+*{
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+    font-size: var(--main);
 }
-/* Header */
+button{
+    border-radius: 10px;
+    background-color: var(--lightGreen);
+    padding: 1em;
+    border: none;
+}
 nav{
-    border-bottom: 3px solid var(--black);
+    padding: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-}
-nav h1{
+    background-color: var(--lightGreen);
     color: var(--green);
-    font-family: var(--headings);
-    font-size: 2.5em;
-    padding-left: 0.5em;
 }
 nav a{
     text-decoration: none;
-    padding: 1em;
-    font-size: 1.4em;
     color: var(--black);
-    margin-right: 0.5em;
+    font-size: var(--header);
+    background-color: var(--lightGreen);
 }
-nav a:hover{
-    text-decoration: underline;
+.projectDiv{
     color: var(--green);
-}
-#logout{
-    color: var(--cream);
-    background-color: var(--green);
-    padding: 1em;
-    border-radius: 10px;
-    margin: 1em;
-}
-/* Projects Section */
-#projects{
-    margin: 0 auto;
-    padding: 1em;
-}
-#projectDiv{
     display: flex;
     flex-direction: column;
+    margin: 2em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+    height: 150px;
     padding: 1em;
-    border: 1px solid var(--black);
-    border-radius: 15px;
 }
-#bottomPart{
+.projectDiv > p{
+    padding-top: 0.6em;
+}
+#entryPage{
+    margin: 4em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-#projectName{
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: var(--headings);
-}
-#projectDesc{
-    font-size: 1.2em;
-}
-#projectDate{
-    font-size: 0.9em;
-}
-#projectFund{
-    font-size: 1em;
-    color: var(--green);
-}
-#projectBtn, #loginBtn,#fundMeBtn{
-    background-color: var(--green);
-    border-radius: 15px;
-    color: var(--cream);
-    font-family: var(--headings);
-    border: none;
-    padding: 1em;
-    margin: 1em;
-}
-
-
-/* Single Project */
-#singleProject{
-    border: 2px solid var(--black);
-    border-radius: 15px;
-    margin: 3em;
-    padding: 2em;
-}
-/* Login Page */
-#loginDiv{
-    margin: 2em;
-    padding: 2em;
-   
-}
-h2{
+#entryPage h2{
     text-align: center;
-    font-family: var(--headings);
-    font-size: 2em;
+    font-size: var(--header);
     color: var(--green);
+    font-weight: bold;
 }
-#usernameInput, #passwordInput, #emailInput{
-    border-radius: 15px;
-    padding: 1em;
-    border: none;
-    width: 30%;
-    margin: 1em;
-}
-form{
+
+#signupForm, #loginForm{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding-block: 1em;
+
 }
-#loginBtn{
-    padding: 1em 2em;
+#signupForm input, #loginForm input{
+    margin-block: 1em;
+    border-radius: 10px;
+    padding: 1em;
+   border: 2px solid var(--lightGreen);
+
 }

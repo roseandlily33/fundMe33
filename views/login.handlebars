@@ -1,14 +1,32 @@
-<section>
-    <div id="loginDiv">
-        <h2>Log In</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="usernameInput" name="username"> 
-            <label for="password">Password:</label>
-            <input type="text" id="passwordInput" name="password">
-            <button id="loginBtn">Login</button>
-            <p>No Account? <a href="/signUp">Sign Up</a></p>
-        </form>
-    </div>
+<section id="entryPage">
+<!--Login --> 
+<div>
+<h2>Login</h2>
+<form id="loginForm">
+    <label for="emailLogin">Email:</label>
+    <input type="text" id="emailLogin">
+    <label for="passwordLogin">Password:</label>
+    <input type="password" id="passwordLogin">
+    <button>Login</button>
+</form>
+</div>
+
+<!-- Signup -->
+<div>
+ <h2>Signup</h2>
+ <form id="signupForm">
+    <label for="emailSignup">Email:</label>
+    <input type="text" id="emailSignup">
+    <label for="usernameSignup">Username:</label>
+    <input type="text" id="usernameSignup">
+    <label for="passwordSignup">Password:</label>
+    <input type="password" id="passwordSignup">
+    <button>Signup</button>
+ </form>
+
+</div>
+
 </section>
 <script src="login.js"></script>
+<script src="signup.js"></script>
+
