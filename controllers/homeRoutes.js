@@ -17,22 +17,17 @@ router.get('/', async(req, res) => {
     }
 })
 
-
-
-
-
 router.get('/profile', async(req, res) => {
     try{
-        console.log('GETTING THE PROFILE PAGE')
-        const userData = await User.findOne({where: {id: req.session.user_id}});
-        console.log(userData);
+        const userData = await User.findOne({where: {id: req.session.user_id}, 
+            include: [{model: Project}],
+        });
         const user = userData.get({plain: true});
-        console.log(user);
+        console.log('USERDATA', user);
         res.render('profile', {
             ...user,
             logged_in: true
         })
-
     } catch(err){
         res.status(500).json({message: 'Cannot get the profile page'})
     }

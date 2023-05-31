@@ -118,13 +118,23 @@ form h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
-#currentProjects h4{
+#currentProjects h3{
     text-align: center;
     color: var(--green);
-    padding-block: 2em;
+    padding-block: 0.5em;
+    font-size: var(--header)
+}
+#projectDiv{
+    width: 80%;
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+    margin-block: 2em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 /* Footer */
 footer{

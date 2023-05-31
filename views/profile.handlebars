@@ -16,15 +16,16 @@
     <h3>Current Projects:</h3>
     {{#if projects.length}}
     {{#each projects as |project|}}
-    <div>
-        <h3>{{project.name}}</h3>
+    <div id="projectDiv">
+        <h4>{{project.name}}</h4>
         <p>{{project.description}}</p>
-        <button id="deleteBtn">Delete Project</button>
+        <button class="data-id-{{project.id}}">Delete Project</button>
     </div>
     {{/each}}
     {{else}}
-    <h4>Create a project above</h4>
+    <h3>Create a project above</h3>
     {{/if}}
 </div>
 
 <script src="profile.js"></script>
+<script src="delete.js"></script>
