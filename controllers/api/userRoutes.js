@@ -6,7 +6,11 @@ router.post('/', async(req, res) => {
         console.log('HITTING THE CREATE A USER')
         const userData = await User.create(req.body);
        console.log(userData);
+       req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
         res.status(200).json(userData);
+      });
     } catch(err){
         res.status(500).json({message: 'Cannot create the user'})
     }
