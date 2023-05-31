@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {User, Project} = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 //This is working
 router.get('/', async(req, res) => {
@@ -17,7 +17,7 @@ router.get('/', async(req, res) => {
     }
 })
 
-router.get('/profile', async(req, res) => {
+router.get('/profile', withAuth, async(req, res) => {
     try{
         const userData = await User.findOne({where: {id: req.session.user_id}, 
             include: [{model: Project}],
@@ -40,7 +40,7 @@ router.get('/login', (req, res) => {
     } res.render('login')
 })
 
-router.get('/project/:id', async(req, res) => {
+router.get('/project/:id', withAuth, async(req, res) => {
     try{
         const projectData = await Project.findByPk(req.params.id);
         const project = projectData.get({plain: true});
