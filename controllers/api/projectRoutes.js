@@ -24,7 +24,7 @@ router.delete('/:id', async(req, res) => {
           });
         res.json(projectData);
     } catch(err){
-        res.status(500).json({message: 'Cannot elete the '})
+        res.status(500).json({message: 'Cannot delete the '})
     }
 })
 
