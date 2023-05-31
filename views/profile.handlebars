@@ -1,9 +1,8 @@
-<div>
+<div id="profilePage">
     <h2>Welcome {{name}}</h2> 
-</div>
-<div>
-    <h3>Create a new project</h3>
+ 
     <form id="newProject"> 
+           <h3>Create a new project</h3>
         <label for="projectName">Project Name:</label>
         <input type="text" id="projectName">
         <label for="description">Description:</label>
@@ -13,13 +12,14 @@
        <button>Create</button>
     </form>
 </div>
-<div>
+<div id="currentProjects">
     <h3>Current Projects:</h3>
-    {{if projects.length}}
+    {{#if projects.length}}
     {{#each projects as |project|}}
     <div>
         <h3>{{project.name}}</h3>
         <p>{{project.description}}</p>
+        <button id="deleteBtn">Delete Project</button>
     </div>
     {{/each}}
     {{else}}

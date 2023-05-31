@@ -10,6 +10,6 @@ const logout = async () => {
       alert(response.statusText);
     }
   };
-  console.log('Add in the query selector for the logout page')
-  document.querySelector('').addEventListener('click', logout);
+
+  document.querySelector('#logoutBtn').addEventListener('click', logout);
   

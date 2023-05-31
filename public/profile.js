@@ -1,17 +1,20 @@
 const formHandler = async(e) => {
     e.preventDefault();
-    const name = document.querySelector('').value.trim();
-    const needed_funding = document.querySelector('').value.trim();
-    const description = document.querySelector('').value.trim();
+    const name = document.querySelector('#projectName').value.trim();
+    const description = document.querySelector('#description').value.trim();
+    const needed_funding = document.querySelector('#neededFunding').value.trim();
+    
 
     if(name&& needed_funding && description){
+        console.log(name, needed_funding, description)
         const response = await fetch(`/api/projects`, {
             method: 'POST',
-            body: JSON.stringify({name, needed_funding, description}),
+            body: JSON.stringify({name, description, needed_funding}),
             headers: {
                 'Content-Type' : 'application/json',
             }
         });
+        console.log('RESPoNSE',response);
         if(response.ok){
             document.location.replace('/profile');
         } else {
@@ -23,7 +26,7 @@ const formHandler = async(e) => {
 const deleteHandler = async(e) => {
     if(e.target.hasAttribute('data-id')){
         const id = e.target.getAttribute('data-id');
-        const response = await fetch(`/api/projects/${id}`, {
+        const response = await fetch(`/api/projects${id}`, {
             method: 'DELETE',
         });
         if(response.ok){
@@ -33,6 +36,6 @@ const deleteHandler = async(e) => {
         }
     }
 };
-console.log('The query selectors neeed to be added for delete and submit')
-document.querySelector('').addEventListener('submit', formHandler);
-document.querySelector('').addEventListener('submit', deleteHandler);
+
+document.querySelector('#newProject').addEventListener('submit', formHandler);
+document.querySelector('#deleteBtn').addEventListener('submit', deleteHandler);

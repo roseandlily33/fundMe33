@@ -11,12 +11,14 @@
     --mainFont: 'Lato', sans-serif;
 }
 *{
-    background-color: var(--white);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--mainFont);
     font-size: var(--main);
+}
+body{
+    background-color: var(--white);
 }
 button{
     border-radius: 10px;
@@ -36,8 +38,9 @@ nav a{
     text-decoration: none;
     color: var(--black);
     font-size: var(--header);
-    background-color: var(--lightGreen);
+    padding-inline: 0.5em;
 }
+/* Main page */
 .projectDiv{
     color: var(--green);
     display: flex;
@@ -51,6 +54,7 @@ nav a{
 .projectDiv > p{
     padding-top: 0.6em;
 }
+
 #entryPage{
     margin: 4em;
     display: flex;
@@ -63,7 +67,7 @@ nav a{
     color: var(--green);
     font-weight: bold;
 }
-
+/* Signup/login */
 #signupForm, #loginForm{
     display: flex;
     flex-direction: column;
@@ -76,4 +80,54 @@ nav a{
     padding: 1em;
    border: 2px solid var(--lightGreen);
 
+}
+/* Profile page */
+#profilePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    
+}
+#profilePage h2{
+    text-align: center;
+    font-size: var(--header);
+    color: var(--green);
+    margin-bottom: 0.5em;
+}
+form h3{
+    font-size: 1.2em;
+    padding-block: 1em;
+}
+#profilePage form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 2em;
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+    width: 60%;
+}
+#profilePage input{
+ border: 2px solid var(--lightGreen);
+ border-radius: 10px;
+ padding: 1em;
+}
+/* Current Projects on Profile page */
+#currentProjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#currentProjects h4{
+    text-align: center;
+    color: var(--green);
+    padding-block: 2em;
+}
+/* Footer */
+footer{
+padding: 1em;
+background-color: var(--lightGreen);
 }
