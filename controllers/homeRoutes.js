@@ -7,6 +7,7 @@ router.get('/', async(req, res) => {
     try{
         const projectData = await Project.findAll();
         const projects = projectData.map(project => project.get({plain: true}));
+        console.log(projects);
         res.render('homepage', {
             projects,
             logged_in: req.session.logged_in
@@ -16,15 +17,19 @@ router.get('/', async(req, res) => {
     }
 })
 
+
+
+
+
 router.get('/profile', async(req, res) => {
     try{
         console.log('GETTING THE PROFILE PAGE')
-        const userData = await User.findByPk(req.session.user_id);
+        const userData = await User.findOne({where: {id: req.session.user_id}});
         console.log(userData);
         const user = userData.get({plain: true});
         console.log(user);
         res.render('profile', {
-            user,
+            ...user,
             logged_in: true
         })
 
